@@ -2,6 +2,8 @@ package net.sf.esfinge.querybuilder;
 
 import net.sf.esfinge.querybuilder.methodparser.EntityClassProvider;
 
+import java.lang.reflect.Method;
+
 public class DummyEntityClassProvider implements EntityClassProvider{
 
 	@Override
@@ -9,6 +11,7 @@ public class DummyEntityClassProvider implements EntityClassProvider{
 		return null;
 	}
 
+	public Class<?> getEntityClass(Method m, String name) { return null;}
 	
 
 }

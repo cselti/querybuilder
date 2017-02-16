@@ -46,11 +46,11 @@
 	</properties>
 
 	<dependencies>
-		<dependency>
-			<groupId>org.hibernate.javax.persistence</groupId>
-			<artifactId>hibernate-jpa-2.0-api</artifactId>
-			<version>1.0.0.Final</version>
-		</dependency>
+            <dependency>
+                <groupId>org.hibernate</groupId>
+                <artifactId>ejb3-persistence</artifactId>
+                <version>1.0.1.GA</version>
+            </dependency>
 
 		<!-- TESTS -->
 		<dependency>
@@ -202,7 +202,7 @@
 					</plugin>
 
 
-					<plugin>
+					<!--<plugin>
 						<groupId>org.apache.maven.plugins</groupId>
 						<artifactId>maven-gpg-plugin</artifactId>
 						<version>1.5</version>
@@ -227,7 +227,7 @@
 							<nexusUrl>https://oss.sonatype.org/</nexusUrl>
 							<autoReleaseAfterClose>true</autoReleaseAfterClose>
 						</configuration>
-					</plugin>
+					</plugin>-->
 
 
 					<plugin>
@@ -293,7 +293,7 @@
 
 					
 
-					<plugin>
+					<!--<plugin>
 						<groupId>org.apache.maven.plugins</groupId>
 						<artifactId>maven-gpg-plugin</artifactId>
 						<version>1.5</version>
@@ -318,7 +318,7 @@
 							<nexusUrl>https://oss.sonatype.org/</nexusUrl>
 							<autoReleaseAfterClose>true</autoReleaseAfterClose>
 						</configuration>
-					</plugin>
+					</plugin>-->
 
 
 

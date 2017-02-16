@@ -82,7 +82,8 @@ public abstract class BasicMethodParser implements MethodParser {
 		QueryInfo qi = new QueryInfo();
 		qi.setQueryType(m);
 		qi.setEntityName(getEntityName(words, index));
-		Class<?> entityClass = classProvider.getEntityClass(qi.getEntityName());
+		Class<?> entityClass = classProvider.getEntityClass(m, qi.getEntityName());
+		//Class<?> entityClass = classProvider.getEntityClass(m.getReturnType().getName());
 		if (entityClass == null) {
 			throw new EntityClassNotFoundException("Entity class " + qi.getEntityName() + " not found.");
 		}
@@ -120,7 +121,9 @@ public abstract class BasicMethodParser implements MethodParser {
 		}
 		IndexCounter index = new IndexCounter();
 		String name = getEntityName(words, index);
-		Class c = classProvider.getEntityClass(name);
+
+		//Class c = classProvider.getEntityClass(name);
+		Class c = classProvider.getEntityClass(m, name);
 		return c != null;
 	}
 
